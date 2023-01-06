@@ -12,8 +12,8 @@ jobs:
     name: Publish Templates
     runs-on: ubuntu-latest
 
-    environment:
-      name: Staging
+ #   environment:
+ #     name: Staging
 
     defaults:
       run:
