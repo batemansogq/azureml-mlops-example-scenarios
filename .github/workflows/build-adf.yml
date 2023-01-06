@@ -12,6 +12,9 @@ jobs:
     name: Publish Templates
     runs-on: ubuntu-latest
 
+    environment:
+      name: Staging
+
     defaults:
       run:
         shell: bash -l {0}
