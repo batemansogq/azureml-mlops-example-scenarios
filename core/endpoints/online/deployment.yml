@@ -1,0 +1,19 @@
+$schema: https://azuremlschemas.azureedge.net/latest/managedOnlineDeployment.schema.json
+name: main
+code_configuration:
+  code: ../../src
+  scoring_script: online_score.py
+endpoint_name: credit-card-default-oe
+environment: azureml:credit-card-default-score@latest
+model: azureml:credit-card-default@latest
+instance_type: Standard_F2s_v2
+instance_count: 1
+app_insights_enabled: true
+data_collector:
+  collections:
+    model_inputs:
+      enabled: "true"
+    model_outputs:
+      enabled: "true"
+    model_inputs_outputs:
+      enabled: "true"
